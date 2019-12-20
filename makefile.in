@@ -38,14 +38,14 @@ SYSTEM = gfortran
 #    This variable cannot be left blank
 RUN =OPT
 #
-INSTALLDIR=/opt/USGS
+INSTALLDIR=@prefix@
 #INSTALLDIR=~/gcc
 #
 # DATA FORMATS
 #  For each data format you want to include in the library, set the corresponding
 #  variable below to 'T'.  Set to 'F' any you do not want compiled or any unavailable
 USENETCDF = T
-USEGRIB = T
+USEGRIB = @USEGRIB@
 
 # MEMORY
 # If you need pointer arrays instead of allocatable arrays, set this to 'T'
@@ -106,13 +106,13 @@ EXEC = \
 ##########  GNU Fortran Compiler  #############################################
 ifeq ($(SYSTEM), gfortran)
     FCHOME=/usr
-    FC = /usr/bin/gfortran
+    FC = @GFORTRAN_DIR@
 
     #COMPINC = -I$(FCHOME)/local/include -I$(FCHOME)/include -I$(FCHOME)/lib64/gfortran/modules -I$(INSTALLDIR)/include
     #COMPLIBS = -L$(FCHOME)/local/lib -L$(FCHOME)/lib64 -L${INSTALLDIR}/lib 
 
-    COMPINC = -I$(FCHOME)/include -I$(FCHOME)/lib64/gfortran/modules -I$(INSTALLDIR)/include
-    COMPLIBS = -L$(FCHOME)/lib64 -L${INSTALLDIR}/lib
+    COMPINC = -I$(FCHOME)/include -I$(FCHOME)/lib64/gfortran/modules -I$(INSTALLDIR)/include @OTHERINC@
+    COMPLIBS = -L$(FCHOME)/lib64 -L${INSTALLDIR}/lib @OTHERLIBS@
 
     LIBS = $(COMPLIBS) $(COMPINC) #-lefence
     # -lefence 
