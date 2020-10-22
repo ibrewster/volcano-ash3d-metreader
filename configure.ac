@@ -38,7 +38,7 @@ else
     USEGRIB='F'
 fi
 
-AC_ARG_WITH(['grib'], AS_HELP_STRING([--without-grib], [Ignore presence of GRIB and disable it]))
+AC_ARG_WITH([grib], AS_HELP_STRING([--without-grib], [Ignore presence of GRIB and disable it]))
 if test "x$with_grib" == xno; then
     USEGRIB='F'
 fi

@@ -641,7 +641,7 @@ SHELL'
 ac_subst_files=''
 ac_user_opts='
 enable_option_checking
-with_'grib'
+with_grib
 '
       ac_precious_vars='build_alias
 host_alias
@@ -2778,9 +2778,9 @@ else
 fi
 
 
-# Check whether --with-'grib' was given.
-if test "${with_'grib'+set}" = set; then :
-  withval=$with_'grib';
+# Check whether --with-grib was given.
+if test "${with_grib+set}" = set; then :
+  withval=$with_grib;
 fi
 
 if test "x$with_grib" == xno; then
