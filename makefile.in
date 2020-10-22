@@ -114,7 +114,7 @@ ifeq ($(SYSTEM), gfortran)
     COMPINC = -I$(FCHOME)/include -I$(FCHOME)/lib64/gfortran/modules -I$(INSTALLDIR)/include @OTHERINC@
     COMPLIBS = -L$(FCHOME)/lib64 -L${INSTALLDIR}/lib @OTHERLIBS@
 
-    LIBS = $(COMPLIBS) $(COMPINC) #-lefence
+    LIBS = $(COMPLIBS) $(COMPINC) -I@prefix@/include -L@prefix@/lib
     # -lefence 
 # Debugging flags
 ifeq ($(RUN), DEBUG)
