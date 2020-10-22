@@ -641,6 +641,7 @@ SHELL'
 ac_subst_files=''
 ac_user_opts='
 enable_option_checking
+with_'grib'
 '
       ac_precious_vars='build_alias
 host_alias
@@ -1256,6 +1257,11 @@ if test -n "$ac_init_help"; then
      short | recursive ) echo "Configuration of FULL-PACKAGE-NAME VERSION:";;
    esac
   cat <<\_ACEOF
+
+Optional Packages:
+  --with-PACKAGE[=ARG]    use PACKAGE [ARG=yes]
+  --without-PACKAGE       do not use PACKAGE (same as --with-PACKAGE=no)
+  --without-grib          Ignore presence of GRIB and disable it
 
 Some influential environment variables:
   NETCDF_DIR  Directory where netcdf is installed
@@ -2770,6 +2776,17 @@ if test $FOUND_ECCODES -eq 1 -a $FOUND_ECCODES_F90 -eq 1; then
 else
     USEGRIB='F'
 fi
+
+
+# Check whether --with-'grib' was given.
+if test "${with_'grib'+set}" = set; then :
+  withval=$with_'grib';
+fi
+
+if test "x$with_grib" == xno; then
+    USEGRIB='F'
+fi
+
 
 
 # FIXME: Replace `main' with a function in `-lhourssince':

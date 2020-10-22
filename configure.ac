@@ -37,6 +37,12 @@ if test $FOUND_ECCODES -eq 1 -a $FOUND_ECCODES_F90 -eq 1; then
 else
     USEGRIB='F'
 fi
+
+AC_ARG_WITH(['grib'], AS_HELP_STRING([--without-grib], [Ignore presence of GRIB and disable it]))
+if test "x$with_grib" == xno; then
+    USEGRIB='F'
+fi
+
 AC_SUBST([USEGRIB])
 
 # FIXME: Replace `main' with a function in `-lhourssince':
