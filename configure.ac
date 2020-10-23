@@ -21,7 +21,7 @@ fi
 
 #Check for /usr/local/ Directory
 AC_CHECK_FILE([/usr/local],[OTHERLIBS="-L/usr/local/lib"; OTHERINC="-I/usr/local/include";])
-AC_CHECK_FILE([/home/linuxbrew/.linuxbrew],[OTHERLIBS="$OTHERLIBS -L/home/linuxbrew/.linuxbrew/lib"; OTHERINC="$OTHERLIBS -I/home/linuxbrew/.linuxbrew/include";])
+AC_CHECK_FILE([/home/linuxbrew/.linuxbrew],[OTHERLIBS="$OTHERLIBS -L/home/linuxbrew/.linuxbrew/lib"; OTHERINC="$OTHERINC -I/home/linuxbrew/.linuxbrew/include";])
 AC_SUBST([OTHERLIBS])
 AC_SUBST([OTHERINC])
 
