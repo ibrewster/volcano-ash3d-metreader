@@ -1904,6 +1904,25 @@ if test "x$ac_cv_file__usr_local" = xyes; then :
   OTHERLIBS="-L/usr/local/lib"; OTHERINC="-I/usr/local/include";
 fi
 
+{ $as_echo "$as_me:${as_lineno-$LINENO}: checking for /home/linuxbrew/.linuxbrew" >&5
+$as_echo_n "checking for /home/linuxbrew/.linuxbrew... " >&6; }
+if ${ac_cv_file__home_linuxbrew__linuxbrew+:} false; then :
+  $as_echo_n "(cached) " >&6
+else
+  test "$cross_compiling" = yes &&
+  as_fn_error $? "cannot check for file existence when cross compiling" "$LINENO" 5
+if test -r "/home/linuxbrew/.linuxbrew"; then
+  ac_cv_file__home_linuxbrew__linuxbrew=yes
+else
+  ac_cv_file__home_linuxbrew__linuxbrew=no
+fi
+fi
+{ $as_echo "$as_me:${as_lineno-$LINENO}: result: $ac_cv_file__home_linuxbrew__linuxbrew" >&5
+$as_echo "$ac_cv_file__home_linuxbrew__linuxbrew" >&6; }
+if test "x$ac_cv_file__home_linuxbrew__linuxbrew" = xyes; then :
+  OTHERLIBS="$OTHERLIBS -L/home/linuxbrew/.linuxbrew/lib"; OTHERINC="$OTHERLIBS -I/home/linuxbrew/.linuxbrew/include";
+fi
+
 
 
 
